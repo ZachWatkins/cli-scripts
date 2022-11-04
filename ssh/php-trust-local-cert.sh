@@ -3,6 +3,8 @@
 # Needed by GuzzleHttp to call certain resources.
 curl -O https://curl.se/ca/cacert.pem
 echo "" >> cacert.pem
+echo "Certificate for $1.local (Local by Flywheel site)" >> cacert.pem
+echo "" >> cacert.pem
 cat "$HOME/AppData/Roaming/Local/run/router/nginx/certs/$1.local.crt" >> cacert.pem
 
 touch php.ini
